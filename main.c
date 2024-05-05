@@ -92,8 +92,6 @@ int main(void){
                 printf("Quitting...\n");
                 if (Tasks != NULL)
                     freetaskList(Tasks);
-                if (tmpTask != NULL)
-                    freeTask(tmpTask);
                 if (Staff != NULL)
                     freeStaff(Staff);
                 printf("\n");
