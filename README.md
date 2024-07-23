@@ -15,7 +15,6 @@ This repository contains simple projects written in C language. The projects are
 
 ## Requirements
 - CMake
-- C compiler (gcc, clang, etc.)
 
 ## Build
 To build the projects, run the following commands:
