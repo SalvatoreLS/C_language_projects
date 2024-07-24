@@ -98,7 +98,10 @@ void nonogram_print(Nonogram nonogram) {
 
     for (int i = 0; i < nonogram->rows; i++) {
         for (int j = 0; j < nonogram->cols; j++) {
-            printf("%d ", nonogram->matrix[i][j]);
+            if (nonogram->matrix[i][j] == -1)
+                printf("0 ");
+            else
+                printf("%d ", nonogram->matrix[i][j]);
         }
         printf("\n");
     }
@@ -170,14 +173,17 @@ void nonogram_solve(Nonogram *nonogram){
     }
 
     nonogram_optimization(nonogram);
+    printf("nonogram after optimization:\n");
+    nonogram_print(*nonogram);
+    printf("\n\n");
 
-    int result = nonogram_solve_recursive(nonogram, 0, 0);
+    int result = nonogram_solve_recursive(*nonogram, 0, 0);
 
     if (!result){
         printf("no solution found\n");
     } else {
         printf("solution found\n");
-        nonogram_print(nonogram);
+        nonogram_print(*nonogram);
     }
 }
 
@@ -311,8 +317,6 @@ void fill_row(Nonogram *nonogram, int index) {
     while (col < (*nonogram)->cols) {
         (*nonogram)->matrix[index][col++] = -1;
     }
-    printf("\n\nrow %d filled\n", index);
-    nonogram_print(*nonogram);
 }
 
 void fill_col(Nonogram *nonogram, int index){
@@ -328,7 +332,4 @@ void fill_col(Nonogram *nonogram, int index){
     while (row < (*nonogram)->rows){
         (*nonogram)->matrix[row++][index] = -1;
     }
-
-    printf("\n\ncolumn %d filled\n", index);
-    nonogram_print(*nonogram);
 }

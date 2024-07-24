@@ -3,7 +3,7 @@
 
 int main(int argc, char **argv){
 
-  FILE *file = fopen("../data/simple_nonogram.txt", "r");
+  FILE *file = fopen("../data/hard_nonogram.txt", "r");
 
   if (file == NULL){
     printf("Error opening file\n");

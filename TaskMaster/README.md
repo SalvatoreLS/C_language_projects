@@ -36,11 +36,10 @@ The algorithm generates combinations of staff members and finds the best group o
 2. Run the program using `./gamif`
 3. Follow the prompts to interact with the program
 
-## Files
+## Project structure
 * `main.c`: Main file
 * `gamif.h`: Header file containing function declarations
 * `gamif.c`: File containing function 
-* `README.md`: This file
 
 ## License
 
@@ -48,16 +47,4 @@ This program is licensed under the MIT License. See the LICENSE file for details
 
 ### Credits
 
-* **Salvatore Lo Sardo**: Author of the program
-
-### Changelog
-
-* [Version 1.0]: Initial release
-
-### Contributing
-
-Contributions are welcome! If you'd like to contribute to the program, please submit a pull request.
-
-### Issues
-
-If you encounter any issues with the program, please submit an issue report.
+* **Salvatore Lo Sardo**: Author

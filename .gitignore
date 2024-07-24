@@ -1,3 +1,4 @@
 *.txt
 TaskMasker/build/
 NonogramSolver/build/
+NonogramSolver/others/
